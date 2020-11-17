@@ -1,8 +1,15 @@
-// get elements
-const input = document.querySelector('#input');
-const addButton = document.querySelector('#add-button');
-const pickButton = document.querySelector('#pick-button');
+const hatForm = document.querySelector('#hatForm');
+const pickBtn = document.querySelector('#pick-btn');
+const h2 = document.querySelector('h2');
+let hat = [];
+hatForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const hatItem = hatForm.elements.hatitem;
+  hat.push(hatItem.value);
+  hatItem.value = '';
+});
 
-//functions
-
-//main app
+pickBtn.addEventListener('click', () => {
+  const rand = Math.floor(Math.random() * hat.length);
+  h2.textContent = hat[rand];
+});
