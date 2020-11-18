@@ -1,5 +1,6 @@
 const hatForm = document.querySelector('#hatForm');
 const pickBtn = document.querySelector('#pick-btn');
+const clrBtn = document.querySelector('#clr-btn');
 const error = document.querySelector('#error');
 const h2 = document.querySelector('h2');
 let hat = [];
@@ -29,3 +30,13 @@ pickBtn.addEventListener('click', () => {
   hat = storedHat;
   h2.textContent = hat[rand];
 });
+
+clrBtn.addEventListener('click', () => {
+  localStorage.clear(hat);
+});
+
+
+//===to be added===
+//remove item when picked
+//toggle item list
+//error banner animation
