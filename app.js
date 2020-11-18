@@ -1,13 +1,15 @@
+//grab DOM elements
 const hatForm = document.querySelector('#hatForm');
 const pickBtn = document.querySelector('#pick-btn');
 const clrBtn = document.querySelector('#clr-btn');
 const error = document.querySelector('#error');
 const h2 = document.querySelector('h2');
-let hat = [];
+let hat = []; //empty hat array to be filled
+
+//adds value entered into the empty hat array and saves to local storage
 hatForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const hatItem = hatForm.elements.hatitem;
-  //if value is empty do nothing otherwise add item
   if (!hatItem.value) {
     error.style.display = 'block';
     error.classList.add('active');
@@ -24,6 +26,7 @@ hatForm.addEventListener('submit', (e) => {
   
 });
 
+//picks a random item from the hat array
 pickBtn.addEventListener('click', () => {
   const rand = Math.floor(Math.random() * hat.length);
   let storedHat = JSON.parse(localStorage.getItem('hat'));
@@ -31,8 +34,10 @@ pickBtn.addEventListener('click', () => {
   h2.textContent = hat[rand];
 });
 
+//clears local storage
 clrBtn.addEventListener('click', () => {
   localStorage.clear(hat);
+  h2.textContent = 'Click the pick button to pull from the hat';
 });
 
 
