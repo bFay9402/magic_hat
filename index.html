@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Magic Hat</title>
-</head>
-<body>
-  <h1>The Magic Hat</h1>
-  <form id="hatForm">
-    <input type="text" name="hatitem" placeholder="Enter an item...">
-    <button>Add</button>
-  </form>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>The Magic Hat</title>
+  </head>
+  <body class="grey darken-3">
+    <div class="container center">
+      <div id="error">Error: enter an item</div>
+      <h1 class="white-text">The Magic Hat</h1>
+      <form id="hatForm">
+        <input class="input white-text" type="text" name="hatitem" placeholder="Enter an item...">
+        <br><br>
+        <button id="add-btn" class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></button>
+      </form>
+      <br><br>
+      <button id="pick-btn" class="waves-effect waves-light btn-large deep-purple darken-3">Pick</button>
+      <h2 class="white-text">Click the pick button to pull from the hat</h2>
+    </div>
 
-  <button id="pick-btn">Pick</button>
-  <h2>Click the pick button for a random item</h2>
-  <script src="app.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,15 @@
+   /* label underline focus color */
+   input[type=text]:focus {
+    border-bottom: 1px solid #1565c0 !important;
+  }
+
+  #error {
+    display: none;
+  }
+
+  .active {
+    color: white;
+    background: red;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
