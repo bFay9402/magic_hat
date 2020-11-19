@@ -12,10 +12,10 @@ hatForm.addEventListener('submit', (e) => {
   const hatItem = hatForm.elements.hatitem;
   if (!hatItem.value) {
     error.style.display = 'block';
-    error.classList.add('active');
+    error.classList.add('error-banner');
     setTimeout(function(){
       error.style.display = 'none';
-      error.classList.remove('active');
+      error.classList.remove('error-banner');
     }, 3500);
     
   } else {
@@ -37,11 +37,13 @@ pickBtn.addEventListener('click', () => {
 //clears local storage
 clrBtn.addEventListener('click', () => {
   localStorage.clear(hat);
-  h2.textContent = 'Click the pick button to pull from the hat';
+  h2.textContent = 'Add items to the hat and then click the pick button to pull from the hat';
 });
 
+//toggle list
 
 //===to be added===
 //remove item when picked
 //toggle item list
 //error banner animation
+//remove an item from the list

@@ -11,9 +11,13 @@
     display: none;
   }
 
-  .active {
+  .error-banner {
     color: white;
     background: red;
     border-radius: 5px;
     padding: 10px 20px;
+  }
+
+  .collection {
+    border: none;
   }
